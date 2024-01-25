@@ -8,7 +8,7 @@ import random
 print("Welcome to The Language Game\n")
 print("Today we will test your basic Spanish knowledge\n")
 print("You will receive a set of 10 words, each featuring a different word. Your task is to translate these words from Spanish into English. For every correct translation, you will earn a point towards your score. Try to complete all 10 questions in a consecutive manner.")
-answer = input("Are you ready to play the Quiz? (yes/no): ")
+answer = input("Are you ready to play the Quiz? (y/n): ")
 score = 0 
 total_questions = 10
 
@@ -46,7 +46,7 @@ def game_questions(word):
 translator = Translator()
 
 #Start Game
-if answer.lower() == "y" or "yes":
+if answer.lower() == "y" :
     game_questions(word)
 else:
     print("You did not choose 'yes.' Exiting the game.")
