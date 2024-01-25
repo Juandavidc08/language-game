@@ -15,4 +15,12 @@ score = 0
 total_questions = 10
 
 #functions to read words from a file 
+def search_words(file_name):
+    with open(file_name, "r") as a file:
+        #slipt the content into lines
+        words = file.read().splitlines()
+    return words
+
+words = search_words("words.txt")
+word = random.choice(words)
 
