@@ -45,10 +45,20 @@ def game_questions(question_number, word):
 
 #Question loop 
 def game_loop():
+    # Variable to identifly which words have already being seen in the game an remove them so it doesnt repeat
+    remaining_words = list(words)
+
     #range of values that question_number will take. It will starts from 1 and goes up to 10
     for question_number in range(1, total_questions + 1):
+        if not remaining_words:
+            print("Error: Not enough words in the list.")
+            break
+
         word = random.choice(words)
         game_questions(question_number, word)
+        #take out the last word that it is used so it doesnt appear again NEED TO FIX!!!!
+        word = remaining_words.pop()
+        
        
 # Google API translator
 translator = Translator()
