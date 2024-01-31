@@ -29,8 +29,8 @@ def translate_word(word):
     return translation.text
 
 # Questions function
-def game_questions(word):
-    user_answer = input(f"First Question 1: How do you say in English '{word}'?\n")
+def game_questions(question_number, word):
+    user_answer = input(f"Question {question_number}: How do you say in English '{word}'?\n")
 
     translation = translate_word(word)
 
@@ -43,11 +43,18 @@ def game_questions(word):
         print(f"Wrong answer. The correct answer is {translation}")
         print(f"Your score is: {score} correct answers")
 
+#Question loop 
+def game_loop():
+    #range of values that question_number will take. It will starts from 1 and goes up to 10
+    for question_number in range(1, total_questions + 1):
+        word = random.choice(words)
+        game_questions(question_number, word)
+       
 # Google API translator
 translator = Translator()
 
 #Start Game
 if answer.lower() == "y" :
-    game_questions(word)
+    game_loop()
 else:
     print("You did not choose 'yes.' Exiting the game.")
