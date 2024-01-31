@@ -7,8 +7,9 @@ import random
 
 print("Welcome to The Language Game\n")
 print("Today we will test your basic Spanish knowledge\n")
-print("You will receive a set of 10 words, each featuring a different word. Your task is to translate these words from Spanish into English. For every correct translation, you will earn a point towards your score. Try to complete all 10 questions in a consecutive manner.")
-answer = input("Are you ready to play the Quiz? (y/n): ")
+print("You will receive a set of 10 words, each featuring a different word. Your task is to translate these words from Spanish into English.")
+print("For every correct translation, you will earn a point towards your score. Try to complete all 10 questions in a consecutive manner.\n")
+answer = input("Are you ready to play the Quiz? (y/n): \n")
 score = 0 
 total_questions = 10
 
@@ -29,7 +30,7 @@ def translate_word(word):
 
 # Questions function
 def game_questions(word):
-    user_answer = input(f"First Question 1: How do you say in Spanish '{word}'?\n")
+    user_answer = input(f"First Question 1: How do you say in English '{word}'?\n")
 
     translation = translate_word(word)
 
