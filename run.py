@@ -5,12 +5,15 @@
 from googletrans import Translator
 import random
 
-print("Welcome to The Language Game\n")
+print('----------------------------------------------------------')
+print("             WELCOME TO THE LANGUAGE GAME               \n")
+print('----------------------------------------------------------')
 print("Today we will test your basic Spanish knowledge\n")
 print("You will receive a set of 10 words.")
 print("Your task is to translate them from Spanish into English.")
 print("For every correct translation, you will earn a point.")
 print("Try to complete all 10 questions in a consecutive manner.\n")
+print('----------------------------------------------------------')
 answer = input("Are you ready to play the Quiz? (y/n): \n")
 score = 0
 total_questions = 10
@@ -47,10 +50,10 @@ def game_questions(quest_num, word):
         global score
         score += 1
         print("That is correct! Great job!")
-        print(f"Your score is: {score} correct answers")
+        print(f"Your score is: {score} correct answers\n")
     else:
         print(f"Wrong answer. The correct answer is {translation}")
-        print(f"Your score is: {score} correct answers")
+        print(f"Your score is: {score} correct answers\n")
 
 # Question loop
 
@@ -73,8 +76,24 @@ def game_loop():
 
         word = random.choice(remaining_words)
         game_questions(quest_num, word)
-        # take out the last word that it is used so it doesn't appear again
+        """
+        take out the last word that it is used
+        so it doesn't appear again
+        """
         remaining_words.remove(word)
+    end_game()
+
+# End Game
+
+
+def end_game():
+    print('-----------------------------------------------')
+    print("            ¡¡CONGRATULATIONS!!                ")
+    print(f"Your final score is: {score} out of 10")
+    print('-----------------------------------------------')
+    print("If you want to restart the game press any key")
+    print("Except if you want to exit press the letter (e)")
+    print('-----------------------------------------------')
 
 # Google API translator
 
