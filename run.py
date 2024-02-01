@@ -5,15 +5,15 @@
 from googletrans import Translator
 import random
 
-print('----------------------------------------------------------')
+print("----------------------------------------------------------")
 print("             WELCOME TO THE LANGUAGE GAME               \n")
-print('----------------------------------------------------------')
+print("----------------------------------------------------------")
 print("Today we will test your basic Spanish knowledge\n")
 print("You will receive a set of 10 words.")
 print("Your task is to translate them from Spanish into English.")
 print("For every correct translation, you will earn a point.")
 print("Try to complete all 10 questions in a consecutive manner.\n")
-print('----------------------------------------------------------')
+print("----------------------------------------------------------")
 answer = input("Are you ready to play the Quiz? (y/n): \n")
 score = 0
 total_questions = 10
@@ -42,7 +42,8 @@ def translate_word(word):
 
 
 def game_questions(quest_num, word):
-    user_answer = input(f"{quest_num}:How do you say in English '{word}'?\n")
+    #input for question Loop
+    user_answer = input(f"Q-{quest_num}:How do you say in English '{word}'?\n")
 
     translation = translate_word(word)
 
@@ -87,13 +88,25 @@ def game_loop():
 
 
 def end_game():
-    print('-----------------------------------------------')
-    print("            ¡¡CONGRATULATIONS!!                ")
-    print(f"Your final score is: {score} out of 10")
-    print('-----------------------------------------------')
-    print("If you want to restart the game press any key")
-    print("Except if you want to exit press the letter (e)")
-    print('-----------------------------------------------')
+    print("----------------------------------------------------------")
+    print("                      ¡¡CONGRATULATIONS!!                ")
+    print(f"             Your final score is: {score} out of 10")
+    print("----------------------------------------------------------")
+    print("If you want to restart the game press the letter (r)")
+    print("If you want to exit press any other key")
+    print("----------------------------------------------------------")
+    # Input to restart the game
+    end_answer = input("")
+    if end_answer.lower() == "r":
+        print("----------------------------------------------------------")
+        print("                  GOOD LUCK - LETS DO IT!!           ")
+        print("----------------------------------------------------------")
+        game_loop()
+    else:
+        print("----------------------------------------------------------")
+        print("             Thanks for playing, see you next time.")
+        print("                       Exiting the game...        ")
+        print("----------------------------------------------------------")
 
 # Google API translator
 
