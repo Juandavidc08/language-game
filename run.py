@@ -18,18 +18,33 @@ answer = input("Are you ready to play the Quiz? (y/n): \n")
 score = 0
 total_questions = 10
 
-# Function to read words from a file
+# Function to read words from a file in spanish
 
 
-def search_words(file_name):
+def search_spanish_words(file_name):
+    with open(file_name, "r") as file:
+        # Split the content into lines
+        words = file.read().splitlines()
+    return words
+
+# Function to read words from a file in french
+
+
+def search_french_words(file_name):
     with open(file_name, "r") as file:
         # Split the content into lines
         words = file.read().splitlines()
     return words
 
 
-words = search_words("words.txt")
+words = (
+    search_spanish_words("spanish_words.txt")
+    if "spanish_words.txt"
+    else search_french_words("french_words.txt")
+)
+
 word = random.choice(words)
+
 
 # Function to find word translation in Spanish
 
@@ -42,9 +57,10 @@ def choose_language():
     choice = input("Enter the number of your choice: ")
 
     if choice == "1":
-        return "es"
+        return "es", search_spanish_words("spanish_words.txt")
+
     elif choice == "2":
-        return "fr"
+        return "fr", search_french_words("french_words.txt")
     else:
         raise ValueError("Invalid choice. Please choose a valid language.")
 
@@ -136,7 +152,7 @@ translator = Translator()
 # Choice of language for the game
 
 try:
-    src_lang = choose_language()
+    src_lang, words = choose_language()
 except ValueError as e:
     print(f"Error: {e}")
     exit(1)
