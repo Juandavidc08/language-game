@@ -42,7 +42,7 @@ def translate_word(word):
 
 
 def game_questions(quest_num, word):
-    #input for question Loop
+    # input for question Loop
     user_answer = input(f"Q-{quest_num}:How do you say in English '{word}'?\n")
 
     translation = translate_word(word)
@@ -60,6 +60,10 @@ def game_questions(quest_num, word):
 
 
 def game_loop():
+    # Access global score
+    global score
+    # Reset score every time the game is reset
+    score = 0
     """
      Variable to identifly which words have already being
      seen in the game an remove them so it doesnt repeat
