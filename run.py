@@ -34,18 +34,33 @@ word = random.choice(words)
 # Function to find word translation in Spanish
 
 
-def translate_word(word):
-    translation = translator.translate(word, src="es")
+def choose_language():
+    print("Choose a language:\n")
+    print("1. Spanish (es)")
+    print("2. French (fr)")
+
+    choice = input("Enter the number of your choice: ")
+
+    if choice == "1":
+        return "es"
+    elif choice == "2":
+        return "fr"
+    else:
+        raise ValueError("Invalid choice. Please choose a valid language.")
+
+
+def translate_word(word, src=""):
+    translation = translator.translate(word, src=src_lang)
     return translation.text
 
 # Questions function
 
 
-def game_questions(quest_num, word):
+def game_questions(quest_num, word, src=""):
     # input for question Loop
     user_answer = input(f"Q-{quest_num}:How do you say in English '{word}'?\n")
 
-    translation = translate_word(word)
+    translation = translate_word(word, src_lang)
 
     if user_answer.lower() == translation.lower():
         global score
@@ -116,6 +131,16 @@ def end_game():
 
 
 translator = Translator()
+
+
+# Choice of language for the game
+
+try:
+    src_lang = choose_language()
+except ValueError as e:
+    print(f"Error: {e}")
+    exit(1)
+
 
 # Start Game
 if answer.lower() == "y":
