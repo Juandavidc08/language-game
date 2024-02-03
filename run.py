@@ -5,12 +5,12 @@
 from googletrans import Translator
 import random
 
-print("----------------------------------------------------------")
-print("             WELCOME TO THE LANGUAGE GAME               \n")
-print("----------------------------------------------------------")
-print("Today we will test your basic Spanish knowledge\n")
+print("----------------------------------------------------------------------")
+print("                         WELCOME TO THE LANGUAGE GAME               \n")
+print("----------------------------------------------------------------------")
+print("Today we'll test your basic knowledge in the language of your choice\n")
 print("You will receive a set of 10 words.")
-print("Your task is to translate them from Spanish into English.")
+print("Your task is to translate them to English.")
 print("For every correct translation, you will earn a point.")
 print("Try to complete all 10 questions in a consecutive manner.\n")
 print("----------------------------------------------------------")
@@ -149,8 +149,8 @@ def end_game():
 translator = Translator()
 
 
-# Choice of language for the game
-# Start Game
+# Start Game and choice the  language for the game
+
 if answer.lower() == "y":
     try:
         src_lang, words = choose_language()
