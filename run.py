@@ -150,16 +150,14 @@ translator = Translator()
 
 
 # Choice of language for the game
-
-try:
-    src_lang, words = choose_language()
-except ValueError as e:
-    print(f"Error: {e}")
-    exit(1)
-
-
 # Start Game
 if answer.lower() == "y":
+    try:
+        src_lang, words = choose_language()
+    except ValueError as e:
+        print(f"Error: {e}")
+        exit(1)
+
     game_loop()
 else:
     print("You did not choose 'yes.' Exiting the game.")
