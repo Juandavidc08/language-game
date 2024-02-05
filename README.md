@@ -1,8 +1,20 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+THE LANGUAGE GAME
+---
 
 Welcome,
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+The language game is a pyhton terminal game, which runs in the Code Institute mock terminal on Heroku.
+
+The purpose of this game is learning while playing, the user will chose the language they want to play with
+and they will have to translate to english (EN) some random words they will be given.
+
+The game consist in 10 questions and every correct answer the user will earn a point.
+
+Try to complete all 10 questions!
+---
+
+
+
 
 ## Reminders
 

@@ -6,14 +6,14 @@ from googletrans import Translator
 import random
 
 print("----------------------------------------------------------------------")
-print("                         WELCOME TO THE LANGUAGE GAME               \n")
+print("                    WELCOME TO THE LANGUAGE GAME               \n")
 print("----------------------------------------------------------------------")
 print("Today we'll test your basic knowledge in the language of your choice\n")
 print("You will receive a set of 10 words.")
 print("Your task is to translate them to English.")
 print("For every correct translation, you will earn a point.")
 print("Try to complete all 10 questions in a consecutive manner.\n")
-print("----------------------------------------------------------")
+print("----------------------------------------------------------------------")
 answer = input("Are you ready to play the Quiz? (y/n): \n")
 score = 0
 total_questions = 10
@@ -123,13 +123,13 @@ def game_loop():
 
 
 def end_game():
-    print("----------------------------------------------------------")
+    print("--------------------------------------------------------------")
     print("                      ¡¡CONGRATULATIONS!!                ")
     print(f"             Your final score is: {score} out of 10")
-    print("----------------------------------------------------------")
+    print("--------------------------------------------------------------")
     print("If you want to restart the game press the letter (r)")
     print("If you want to exit press any other key")
-    print("----------------------------------------------------------")
+    print("--------------------------------------------------------------")
     # Input to restart the game
     end_answer = input("")
     if end_answer.lower() == "r":
