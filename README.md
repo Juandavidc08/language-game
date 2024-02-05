@@ -88,8 +88,46 @@ provided are easy and usefull words to know and understand.
 
 ## Testing
 
+- I have mannually test the full game
+- Generating invalid inputs and checking the performance of the game
+- Everything works as it should.
+
+- The code was check by a PEP8 linter
+
 ## Bugs
+
+### Soved bugs
+
+- There where words that appears more than once in each game, I fixed by creating an external list of the same words in where every time a word appears its pop() out if the list so the issue didnt continue.
+
+- After restarting the game the scores continue as the last game, I fixed this by simply start the game loop function checkig the global score that by default was 0.
+
+### Remaining bugs
+
+- No remaining bugs.
+
+### Validator testing
+
+- [PEP8](https://www.pythonchecker.com/)
+
 
 ## Deployment
 
+- This proyect was deployed using Code Institute's mock terminal on Heroku.
+
+- Steps for deployment:
+- Following Code Institute tutorials,
+      * Clone the repository
+      * Create a new Heroku app
+      * Set buildbacks to Python and NodeJS in that order
+      * Config Vars to PORT 8000
+      * Link the Heroku app to repository
+      * Click on Deploy
+
 ## Credits
+
+-  The python code for explaining how to get the [translator-API](https://thepythoncode.com/article/translate-text-in-python?utm_content=cmp-true)
+- Askpython for giving me ideas of games that help me with the first ideas of what I wanted to achieve[like-this-one](https://www.askpython.com/python/examples/easy-games-in-python)
+- Educative.io also brought me some creativity wih [this-game](https://www.educative.io/answers/how-to-create-a-word-guessing-game-in-python)
+-  Code Insititude for the deployment terminal
+[Code Institute](https://codeinstitute.net/) also for my mentor, tutors and community that help me.
