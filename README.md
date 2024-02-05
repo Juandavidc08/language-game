@@ -10,35 +10,39 @@ and they will have to translate to english (EN) some random words they will be g
 
 The game consist in 10 questions and every correct answer the user will earn a point.
 
-Try to complete all 10 questions!
+Try to complete all 10 questions! 
+
+[Link to The Language Game](https://the-language-game-4bf6dd38ccc8.herokuapp.com/)
+---
+![Responsive Mockup](documentation/images/resposive-design.png)
 ---
 
+## How to play
 
+- The user enter to the game and they are give the set of instructions 
+- Its given a choice to start game (y) 
+- The player need to decide in which language you want to try their knowledge:
+  - 1. Spanish
+  - 2. French
+  - 3. Italian
+  - 4. German
+- This answer needs to be numeric ex: Spanish is number 1.
+- After, the player will need to answer 10 questions translating the word that is "shown" into english
+- Finally th player will be able to check their scores and will be able to restart the challenge.
 
+![Flow-Chart, Architecture- diagram of the game](documentation/images/arch-diagram-flow-chart.png)
 
-## Reminders
+- The point of this game is to enjoy, learn and check your basic knowledge in different languages, the words 
+provided are easy and usefull words to know and understand.
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+## Feauters
 
-## Creating the Heroku app
+## Data Model
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## Testing
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Bugs
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Deployment
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
+## Credits
