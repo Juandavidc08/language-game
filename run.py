@@ -4,6 +4,39 @@
 # Library from google translator that will be used for the game
 from googletrans import Translator
 import random
+import os
+
+# Function to read words from each language
+""" 
+    Using UTF-8 is a good practice when working with text files,
+    especially when dealing with multilingual content
+"""
+
+
+def search_spanish_words(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        words = [line.strip() for line in file]
+    return words
+
+
+def search_french_words(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        words = [line.strip() for line in file]
+    return words
+
+
+def search_italian_words(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        words = [line.strip() for line in file]
+
+    return words
+
+
+def search_german_words(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        words = [line.strip() for line in file]
+    return words
+
 
 print("----------------------------------------------------------------------")
 print("                    WELCOME TO THE LANGUAGE GAME               \n")
@@ -18,51 +51,52 @@ answer = input("Are you ready to play the Quiz? (y/n): \n")
 score = 0
 total_questions = 10
 
-# Function to read words from a file in spanish
+# Function to read words from a file each language
 
+spanish_file = "spanish_words.txt"
+french_file = "french_words.txt"
+italian_file = "italian_words.txt"
+german_file = "german_words.txt"
 
-def search_spanish_words(file_name):
-    with open(file_name, "r") as file:
-        # Split the content into lines
-        words = file.read().splitlines()
-    return words
-
-# Function to read words from a file in french
-
-
-def search_french_words(file_name):
-    with open(file_name, "r") as file:
-        # Split the content into lines
-        words = file.read().splitlines()
-    return words
-
-
-words = (
-    search_spanish_words("spanish_words.txt")
-    if "spanish_words.txt"
-    else search_french_words("french_words.txt")
-)
+if os.path.exists(spanish_file):
+    words = search_spanish_words(spanish_file)
+elif os.path.exists(french_file):
+    words = search_french_words(french_file)
+elif os.path.exists(italian_file):
+    words = search_italian_words(italian_file)
+else:
+    words = search_german_words(german_file)
 
 word = random.choice(words)
 
 
-# Function to find word translation in Spanish
+# Function  loop to choose the language in the game
 
 
 def choose_language():
-    print("Choose a language:\n")
-    print("1. Spanish (es)")
-    print("2. French (fr)")
+    while True:
+        print("Choose a language:\n")
+        print("1. Spanish (es)")
+        print("2. French (fr)")
+        print("3. Italian (it)")
+        print("4. German (de)")
 
-    choice = input("Enter the number of your choice: ")
+        choice = input("Enter the number of your choice: ")
 
-    if choice == "1":
-        return "es", search_spanish_words("spanish_words.txt")
+        if choice == "1":
+            return "es", search_spanish_words("spanish_words.txt")
 
-    elif choice == "2":
-        return "fr", search_french_words("french_words.txt")
-    else:
-        raise ValueError("Invalid choice. Please choose a valid language.")
+        elif choice == "2":
+            return "fr", search_french_words("french_words.txt")
+
+        elif choice == "3":
+            return "it", search_italian_words("italian_words.txt")
+
+        elif choice == "4":
+            return "de", search_german_words("german_words.txt")
+
+        else:
+            print("Invalid choice. Please choose a valid language.\n")
 
 
 def translate_word(word, src=""):
