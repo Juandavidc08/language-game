@@ -94,6 +94,26 @@ provided are easy and usefull words to know and understand.
 
 - The code was check by a PEP8 linter
 
+| feature | action | expected result | tested | passed | comments |
+| --- | --- | --- | --- | --- | --- |
+| Start Game | "Y" | You choose yes , the game beggins| Yes | Yes | - |
+| Start Game | "N" | You choose no , exiting game | Yes | Yes | - |
+| Start Game | another key | Invalid choice. Please enter 'y' or 'n'.| Yes | Yes | - |
+| Choose Language | | | | | |
+| Spanish | Type 1. | The user starts the game translation from spanish | Yes | Yes | - |
+| French| Type 2. | The user starts the game translation from french | Yes | Yes | - |
+| Italian | Type 3. | The user starts the game translation from italian | Yes | Yes | - |
+| German | Type 4. | The user starts the game translation from german | Yes | Yes | - |
+| Another value| Any other number or key| Invalid choice. Please choose a valid language.| Yes | Yes | - |
+| Questions | | | | | |
+| if correct | right answer | That is correct! Great job! + 1 in score value | Yes | Yes | - |
+| if wrong | wrong answer | Wrong answer. The correct answer is "word", score value still the same| Yes | Yes | - |
+| End of Game | | | | | |
+| Restart Game | "r" | restart the game in the same language| Yes | Yes | - |
+| Restart Game | any other key |  Thanks for playing, see you next time. Exiting the game... | Yes | Yes | - |
+
+
+
 ## Bugs
 
 ### Soved bugs
@@ -116,13 +136,25 @@ provided are easy and usefull words to know and understand.
 - This proyect was deployed using Code Institute's mock terminal on Heroku.
 
 - Steps for deployment:
+
 - Following Code Institute tutorials,
-      * Clone the repository
-      * Create a new Heroku app
-      * Set buildbacks to Python and NodeJS in that order
-      * Config Vars to PORT 8000
-      * Link the Heroku app to repository
-      * Click on Deploy
+    
+    * Create a new Heroku app
+    * Chose deploment method: Heroku Git, GitHub or Container Registry
+    * In this case we used GitHub, so we simply connect it to the gitHub account
+    * Link the Heroku app to repository
+    * Then go to App connected to GitHub and connect it to your repository using the repository name.
+        * Clone: Cloning a repository means making a copy of an existing repository to your local machine.
+        * Fork: Forking a repository on GitHub is a way to create a copy of someone else's repository under your GitHub account. This copy is still hosted on GitHub.
+    * Set buildbacks to Python and NodeJS in that order
+    * Config Vars to PORT 8000
+    * Click on Deploy
+        * Manual Deploys, you can create an immediate deployment of any branch from the GitHub repo that’s connected to your app. Use manual deploys if you want to control when changes are deployed to Heroku.
+        * Automatic Deloys. When you enable automatic deploys for a GitHub branch, Heroku builds and deploys all pushes to that branch.
+    
+Deploying to Heroku involves taking your code and hosting it on Heroku's platform. This is typically done by pushing your code to a Heroku remote repository.
+
+
 
 ## Credits
 
