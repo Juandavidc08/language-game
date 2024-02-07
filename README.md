@@ -126,6 +126,7 @@ provided are easy and usefull words to know and understand.
 
 ## Credits
 
+- Python.org for making me understand to accessthe filesystem [os.path](https://docs.python.org/3/library/os.path.html)
 -  The python code for explaining how to get the [translator-API](https://thepythoncode.com/article/translate-text-in-python?utm_content=cmp-true)
 - Askpython for giving me ideas of games that help me with the first ideas of what I wanted to achieve[like-this-one](https://www.askpython.com/python/examples/easy-games-in-python)
 - Educative.io also brought me some creativity wih [this-game](https://www.educative.io/answers/how-to-create-a-word-guessing-game-in-python)

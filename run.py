@@ -7,7 +7,8 @@ import random
 import os
 
 # Function to read words from each language
-""" 
+
+"""
     Using UTF-8 is a good practice when working with text files,
     especially when dealing with multilingual content
 """
@@ -47,7 +48,7 @@ print("Your task is to translate them to English.")
 print("For every correct translation, you will earn a point.")
 print("Try to complete all 10 questions in a consecutive manner.\n")
 print("----------------------------------------------------------------------")
-answer = input("Are you ready to play the Quiz? (y/n): \n")
+
 score = 0
 total_questions = 10
 
@@ -184,14 +185,21 @@ translator = Translator()
 
 
 # Start Game and choice the  language for the game
+# Loop for starting the game correctly
 
-if answer.lower() == "y":
-    try:
-        src_lang, words = choose_language()
-    except ValueError as e:
-        print(f"Error: {e}")
-        exit(1)
+while True:
+    answer = input("Are you ready to play the Quiz? (y/n): \n").lower()
 
-    game_loop()
-else:
-    print("You did not choose 'yes.' Exiting the game.")
+    if answer == "y":
+        try:
+            src_lang, words = choose_language()
+        except ValueError as e:
+            print(f"Error: {e}")
+            exit(1)
+        game_loop()
+        break
+    elif answer == "n":
+        print("You chose 'no.' Exiting the game.")
+        break
+    else:
+        print("Invalid choice. Please enter 'y' or 'n'.")
