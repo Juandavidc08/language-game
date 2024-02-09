@@ -48,6 +48,13 @@ print("Your task is to translate them to English.")
 print("For every correct translation, you will earn a point.")
 print("Try to complete all 10 questions in a consecutive manner.\n")
 print("----------------------------------------------------------------------")
+print("                     __...--~~~~~-._   _.-~~~~~--...__              ")
+print("                    ´               `V'               `          ")
+print("                   ´                 |                 `         ")
+print("                  ´__...--~~~~~~-._  |  _.-~~~~~~--...__`         ")
+print("                 ´__.....----~~~~._| | /_.~~~~----.....__`        ")
+print("                =================== |||/===================      ")
+print("                                   `---`                              ")
 
 score = 0
 total_questions = 10

@@ -26,7 +26,7 @@ Try to complete all 10 questions!
   - 2. French
   - 3. Italian
   - 4. German
-- This answer needs to be numeric ex: Spanish is number 1.
+- This answer needs to be numeric ex: Spanish is number "1" or Italian is number "3".
 - After, the player will need to answer 10 questions translating the word that is "shown" into english
 - Finally th player will be able to check their scores and will be able to restart the challenge.
 
@@ -158,6 +158,7 @@ Deploying to Heroku involves taking your code and hosting it on Heroku's platfor
 
 ## Credits
 
+- For the AMAZING! ASSCCII book Art made by Donovan Bake[book](https://www.asciiart.eu/books/books) Edited to make it work but maintain the same structure
 - Python.org for making me understand to accessthe filesystem [os.path](https://docs.python.org/3/library/os.path.html)
 -  The python code for explaining how to get the [translator-API](https://thepythoncode.com/article/translate-text-in-python?utm_content=cmp-true)
 - Askpython for giving me ideas of games that help me with the first ideas of what I wanted to achieve[like-this-one](https://www.askpython.com/python/examples/easy-games-in-python)
