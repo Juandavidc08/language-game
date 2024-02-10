@@ -70,11 +70,13 @@ provided are easy and usefull words to know and understand.
 * total_questions: The total number of questions in the quiz.
 * words: List of words loaded depending on the language.
 * word: A randomly chosen word from the list of words.
-
+* os.path: returns stat information about path in the same format.
 ### Functions:
 
 * search_spanish_words(file_name): Reads words from a file in Spanish.
 * search_french_words(file_name): Reads words from a file in French.
+* search_italian_words(file_name): Reads words from a file in Italian.
+* search_german_words(file_name): Reads words from a file in German.
 * choose_language(): Asks the user to choose a language.
 * translate_word(word, src=""): Uses Google Translate to get the translation of a word.
 * game_questions(quest_num, word, src=""): Asks the user a question and checks the answer.
@@ -109,7 +111,7 @@ provided are easy and usefull words to know and understand.
 | if correct | right answer | That is correct! Great job! + 1 in score value | Yes | Yes | - |
 | if wrong | wrong answer | Wrong answer. The correct answer is "word", score value still the same| Yes | Yes | - |
 | End of Game | | | | | |
-| Restart Game | "r" | restart the game in the same language| Yes | Yes | - |
+| Restart Game | "r" | restart the game| Yes | Yes | - |
 | Restart Game | any other key |  Thanks for playing, see you next time. Exiting the game... | Yes | Yes | - |
 
 
@@ -158,7 +160,7 @@ Deploying to Heroku involves taking your code and hosting it on Heroku's platfor
 
 ## Credits
 
-- For the AMAZING! ASSCCII book Art made by Donovan Bake[book](https://www.asciiart.eu/books/books) Edited to make it work but maintain the same structure
+- For the AMAZING! ASCII book Art made by Donovan Bake[book](https://www.asciiart.eu/books/books) Edited to make it work but maintain the same structure
 - Python.org for making me understand to accessthe filesystem [os.path](https://docs.python.org/3/library/os.path.html)
 -  The python code for explaining how to get the [translator-API](https://thepythoncode.com/article/translate-text-in-python?utm_content=cmp-true)
 - Askpython for giving me ideas of games that help me with the first ideas of what I wanted to achieve[like-this-one](https://www.askpython.com/python/examples/easy-games-in-python)
